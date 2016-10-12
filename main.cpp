@@ -524,7 +524,7 @@ int main()
 	{
 		status = read(first);
 		if (status==1) status = read_enter();
-		if (status==1 || status==2 || status==4)
+		if (status)
 		{
 			printf("Error input\n");
 			if (status==1 || status==4) status = read_enter();
@@ -535,7 +535,7 @@ int main()
 
 		status = read(second);
 		if (status==1) status = read_enter();
-		if (status==1 || status==2 || status==4)
+		if (status)
 		{
 			printf("Error input\n");
 			if (status==1 || status==4) status = read_enter();
@@ -599,6 +599,6 @@ int main()
 	}
 	fclose(stdin);
 	fclose(stdout);
-	system("pause");
+	//system("pause");
 	return 0;
 }
